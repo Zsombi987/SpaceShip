@@ -1,0 +1,5 @@
+```
+SELECT * FROM carsForSale WHERE manufacturernNme = 'Renault' AND acquisitionPrice > 8000;
+UPDATE carsForSale WHERE manufacturerName = 'Volkswagen' SET acquisitionPrice = acquisitionPrice - 100;
+
+```

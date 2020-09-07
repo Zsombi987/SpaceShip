@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en " xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Space Transporter</title>
+</head>
+<body>
+<header>
+    <h1>Space Transporter</h1>
+</header>
+<main>
+    <table>
+        <thead>
+        <tr>
+            <th>Planet</th>
+            <th>Population</th>
+            <th>Spaceship Location</th>
+            <th>People on ship</th>
+        </tr>
+        </thead>
+        <tr th:each="planet : ${planets}" >
+            <th th:text="${planet.name}">Planet</th>
+            <th th:text="${planet.population}">Planet</th>
+            <th th:if="${spaceship.planet == planet.planetId}">
+                <a th:href="'/toplanet/'+${planet.planetId}">
+                    < to planet
+                </a>
+                <a th:href="'/toship/'+${planet.planetId}">
+                    to ship >
+                </a>
+            </th>
+            <th th:unless="${spaceship.planet == planet.planetId}">
+                <a th:href="'/movehere/'+${planet.planetId}">
+                    <button>Move Here</button>
+                </a>
+            </th>
+            <th th:if="${spaceship.planet == planet.planetId}">
+                <span th:text="${spaceship.utilization}"></span>
+            </th>
+            <th th:unless="${spaceship.planet == planet.planetId}">
+                -
+            </th>
+        </tr>
+    </table>
+</main>
+</body>
+</html>
+<style>
+    table {
+        border-collapse: collapse;
+    }
+
+    table, th, td {
+        border: 1px solid black;
+    }
+
+    thead {
+        background: lightgray;
+    }
+</style>
