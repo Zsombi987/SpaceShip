@@ -1,53 +1,8 @@
-# 21stCenturyFoxOSIC Orientation Normal Exam
-
-## Getting Started
-
-- **Fork** this repository under your own account
-- Clone the forked repository under your account to your computer
-- Create a `.gitignore` file so generated files won't be committed
-- Commit your progress frequently and with descriptive commit messages
-- All your answers and solutions should go in this repository
-
-## Keep in mind
-
-- You can use any resource online, but **please work individually**
-
-- **Don't just copy-paste** your answers and solutions, use your own words
-  instead
-
-- **Don't push your work** to GitHub until your mentor announces that the time
-  is up
-
-- Before diving to coding **think about the structure**
-
-## Tasks
-
 # Space Transporter
 
 Let's imagine that it's 2050 and we are able to travel through space.
 Build a cool application that will be able to transport people anywhere in the
 endless space. 
-
-## Frontend
-
-![main](assets/backend-main.png)
-
-- the **frontend** should have
-
-  - a heading with the title of the site
-  - table as depicted above
-  - buttons to move the spaceship to any planet
-  - arrows to move the people from planet to ship and vice versa
-  - consider using some special html characters for the arrows
-  
-## Database
-
-You can use provided SQL file to fill the database:
-
-- [for MySQL](assets/backend-space-transporter.sql)
-- or [for MSSQL](assets/backend-space-transporter-ms.sql).
-
-or just execute few commands and fill it with your own data.
 
 ## Backend
 
@@ -134,46 +89,3 @@ If it is equal then it should redirect to the main page. In this case the main p
 
 - redirect to the main page
 
-![toplanet](assets/backend-transportation-2.png)
-
-## Question
-
-Given the following table named `carsForSale`
-
-| carForSaleID | manufacturerName | modelName | acquisitionPrice | dateAcquired |
-|:------------:|:----------------:|:---------:|:----------------:|:------------:|
-|      1       |    Volkswagen    |   Jetta   |      13300       |  2007-01-07  |
-|      2       |     Renault      |  Laguna   |      14700       |  2007-02-12  |
-|      3       |       Ford       |   Focus   |      13600       |  2007-03-09  |
-|      4       |      Daewoo      |   Tico    |       1100       |  2007-04-17  |
-|      5       |      Toyota      |  Avensis  |      14500       |  2007-05-04  |
-|      6       |    Alfa Romeo    |    156    |       8700       |  2007-06-23  |
-|      7       |    Volkswagen    |  Passat   |      22000       |  2007-07-16  |
-|      8       |     Renault      |   Clio    |       6400       |  2007-08-22  |
-|      9       |       Ford       |  Fiesta   |       6900       |  2007-09-11  |
-|      10      |      Daewoo      |   Cielo   |       3600       |  2007-10-18  |
-|      11      |      Toyota      |   Rav4    |      24900       |  2007-11-11  |
-|      12      |    Alfa Romeo    |    147    |       7500       |  2007-12-25  |
-|      13      |    Volkswaen     |   Golf    |      16700       |  2008-01-14  |
-|      14      |     Renault      |  Megane   |      11400       |  2008-02-24  |
-|      15      |       Ford       |  Mondeo   |      14600       |  2008-03-18  |
-|      16      |      Daewoo      |   Matiz   |       1700       |  2008-04-08  |
-|      17      |      Toyota      |   Yaris   |       7400       |  2008-05-02  |
-|      18      |    Alfa Romeo    |    159    |      17000       |  2008-06-12  |
-|      19      |    Volkswagen    |   Polo    |       6500       |  2008-07-30  |
-|      20      |     Renault      |  Scenic   |       6800       |  2008-08-11  |
-|      21      |       Ford       |  Escort   |       2000       |  2008-09-22  |
-|      22      |      Daewoo      |  Espero   |       2500       |  2008-10-09  |
-|      23      |      Toyota      |  Corolla  |      103000      |  2008-11-05  |
-|      24      |    Alfa Romeo    |    166    |       5200       |  2008-12-24  |
-
-- Write an SQL query to get all `Renault` cars which are more expensive than
-  8000
-
-- Write an SQL query to decrease all `Volkswagen` car's price by 100 units
-
-```
-SELECT * FROM carsForSale WHERE manufacturernNme = 'Renault' AND acquisitionPrice > 8000;
-UPDATE carsForSale WHERE manufacturerName = 'Volkswagen' SET acquisitionPrice = acquisitionPrice - 100;
-
-```
